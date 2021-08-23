@@ -16,7 +16,7 @@ const SetTimer = ({value, handleTime}) => {
 
   return (
     <>
-      <form>
+      <form>``
         <label>
           hour:
           <input

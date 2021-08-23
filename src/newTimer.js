@@ -1,18 +1,17 @@
 import './styles.css';
-import React, { Component } from 'react';
+import React, { Component, createRef } from 'react';
 
 class TimeBox extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       hours: 0,
       minutes: 0,
       seconds:0
     }
-    this.hoursInput = React.createRef();
-    this.minutesInput= React.createRef();
-    this.secondsInput = React.createRef();
-    console.log('this: ', this.secondsInput);
+    this.hoursInput = createRef();
+    this.minutesInput= createRef();
+    this.secondsInput = createRef();
   }
 
   inputHandler = (e) => {
@@ -28,7 +27,6 @@ class TimeBox extends Component {
   }
 
   countDown = () => {
-    console.log('in the countDown')
     const  { hours, minutes, seconds } = this.state;
     let c_seconds = this.convertToSeconds(hours, minutes, seconds);
 
@@ -53,7 +51,10 @@ class TimeBox extends Component {
       }
 
     } else {
+
       clearInterval(this.timer);
+      this.props.timesUp()
+
     }
   }
 
@@ -79,21 +80,21 @@ class TimeBox extends Component {
     console.log(this.state);
     return (
       <div className="App">
-         <h1 className="title"> (( Time To Journal )) </h1>
-         <div className="inputGroup">
+         <h1 className="display-4 shadow-sm p-3 mb-5 bg-body rounded text-muted"> Focus | Reflect </h1>
+         <div className="inputGroup ">
             <h3>Hrs</h3>
-            <input ref={this.hoursInput} type="number" placeholder={0}  name="hours"  onChange={this.inputHandler} />
+            <input className="inputGroup shadow-sm bg-body rounded" ref={this.hoursInput} type="number" placeholder={0}  name="hours"  onChange={this.inputHandler} />
             <h3>Min</h3>
-            <input  ref={this.minutesInput} type="number"  placeholder={0}   name="minutes"  onChange={this.inputHandler} />
+            <input className="inputGroup shadow-sm bg-body rounded" ref={this.minutesInput} type="number"  placeholder={0}   name="minutes"  onChange={this.inputHandler} />
             <h3>Sec</h3>
-            <input   ref={this.secondsInput} type="number"  placeholder={0}  name="seconds"  onChange={this.inputHandler} />
+            <input className="inputGroup shadow-sm bg-body rounded" ref={this.secondsInput} type="number"  placeholder={0}  name="seconds"  onChange={this.inputHandler} />
          </div>
-         <div>
-            <button onClick={this.startTimer} className="start">start</button>
-            <button onClick={this.stopTimer}  className="stop">stop</button>
-            <button onClick={this.resetTimer}  className="reset">reset</button>
+         <div className="btn-group" style={{margin: 20}}>
+            <button onClick={this.startTimer} className="btn btn-outline-secondary">start</button>
+            <button onClick={this.stopTimer}  className="btn btn-outline-secondary">stop</button>
+            <button onClick={this.resetTimer}  className="btn btn-outline-secondary">reset</button>
          </div>
-         <h1> Timer {hours}: {minutes} : {seconds} </h1>
+         <h1 className="display-4 shadow-sm bg-body rounded"> Timer {hours} : {minutes} : {seconds} </h1>
       </div>
 
     );

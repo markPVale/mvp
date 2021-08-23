@@ -9,7 +9,6 @@ import { CountdownCircleTimer } from 'react-countdown-circle-timer'
 //   return `${hours}:${minutes}:${seconds}`
 // }
 
-
 const Timer = () => (
   <CountdownCircleTimer
     // isPlaying={true}
