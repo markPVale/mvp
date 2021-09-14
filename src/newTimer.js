@@ -80,21 +80,21 @@ class TimeBox extends Component {
     console.log(this.state);
     return (
       <div className="App">
-         <h1 className="display-4 shadow-sm p-3 mb-5 bg-body rounded text-muted"> Focus | Reflect </h1>
+         <h1 className="display-4 shadow-sm p-3 mb-5 bg-light rounded text-muted"> Focus | Reflect </h1>
          <div className="inputGroup ">
             <h3>Hrs</h3>
-            <input className="inputGroup shadow-sm bg-body rounded" ref={this.hoursInput} type="number" placeholder={0}  name="hours"  onChange={this.inputHandler} />
+            <input className="inputGroup shadow-sm bg-light rounded" ref={this.hoursInput} type="number" placeholder={0}  name="hours"  onChange={this.inputHandler} />
             <h3>Min</h3>
-            <input className="inputGroup shadow-sm bg-body rounded" ref={this.minutesInput} type="number"  placeholder={0}   name="minutes"  onChange={this.inputHandler} />
+            <input className="inputGroup shadow-sm bg-light rounded" ref={this.minutesInput} type="number"  placeholder={0}   name="minutes"  onChange={this.inputHandler} />
             <h3>Sec</h3>
-            <input className="inputGroup shadow-sm bg-body rounded" ref={this.secondsInput} type="number"  placeholder={0}  name="seconds"  onChange={this.inputHandler} />
+            <input className="inputGroup shadow-sm bg-light rounded" ref={this.secondsInput} type="number"  placeholder={0}  name="seconds"  onChange={this.inputHandler} />
          </div>
          <div className="btn-group" style={{margin: 20}}>
             <button onClick={this.startTimer} className="btn btn-outline-secondary">start</button>
             <button onClick={this.stopTimer}  className="btn btn-outline-secondary">stop</button>
             <button onClick={this.resetTimer}  className="btn btn-outline-secondary">reset</button>
          </div>
-         <h1 className="display-4 shadow-sm bg-body rounded"> Timer {hours} : {minutes} : {seconds} </h1>
+         <h1 className="display-4 shadow-sm bg-light rounded"> Timer {hours} : {minutes} : {seconds} </h1>
       </div>
 
     );

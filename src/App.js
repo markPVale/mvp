@@ -54,8 +54,8 @@ class App extends React.Component {
     return (
       <>
       <div style={{marginTop: 80}} ></div>
-      <div className='container'>
-      <div className="shadow-lg p-3 mb-5 bg-body rounded">
+      <div className='container bg-light'>
+      <div className="shadow-lg p-3 mb-5 bg-light rounded">
       <TimeBox  timesUp={this.inputHandler}/>
       </div>
         {/* <Button variant="contained"> material UI button</Button> */}
