@@ -1,6 +1,7 @@
 import React, {useState, useEffect, useContext} from 'react'
 import ReactDom from 'react-dom'
 import FormPropsTextFields from './text'
+import axios from 'axios';
 // import entriesCreate from './entryController'
 
 
@@ -49,25 +50,57 @@ const Modal = ({popModal, status, children, onClose, storage}) => {
     localStorage.setItem("entries", json);
   }, [entries]);
 
-  const clickHandler = (entries) => {
-    storage(entries);
-    onClose();
-  }
+  console.log('entry check', entries);
+
+  // const clickHandler = (entries) => {
+  //   axios.post('/newEntry', {
+  //     title: `${projectText}`,
+  //     issues: `${issuesText}`,
+  //     body: `${reflectText}`
+  //   })
+  //   .then((response) => {
+  //     console.log(response);
+  //   })
+  //   .catch((error) => {
+  //     console.log(error)
+  //   })
+  //   // storage(entries);
+  //   onClose();
+  // }
 
   const handleProject = (e) => {
-    setEntries({ projectText: e.target.value });
+    setEntries(prevState => ({
+      ...prevState,
+      projectText: e.target.value }))
   }
 
   const handleIssues = (e) => {
-    setEntries({ issuesText: e.target.value });
+    setEntries(prevState => ({
+      ...prevState,
+      issuesText: e.target.value }))
   }
 
   const handleReflect = (e) => {
-    setEntries({ reflectText: e.target.value});
+    setEntries(prevState => ({
+      ...prevState,
+      reflectText: e.target.value}))
   }
 
-
-
+  const clickHandler = (entries) => {
+    axios.post('/newEntry', {
+      title: entries.projectText,
+      issues: entries.issuesText,
+      body: entries.reflectText,
+    })
+    .then((response) => {
+      console.log(response);
+    })
+    .catch((error) => {
+      console.log(error)
+    })
+    // storage(entries);
+    onClose();
+  }
 
   console.log('entries: ', entries)
   console.log('display:', display)

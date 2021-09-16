@@ -49,8 +49,17 @@ const config = {
     extensions: [
       '.js',
       '.jsx'
-    ]
-  }
+    ],
+      fallback: {
+        util: require.resolve("util/"),
+        buffer: false,
+        assert: false,
+      }
+  },
+  plugins: [
+    new webpack.IgnorePlugin(/^pg-native$/),
+    new webpack.IgnorePlugin({ resourceRegExp: /^pg-native$/ })
+  ],
 };
 
 module.exports = config;
