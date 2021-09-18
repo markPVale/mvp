@@ -1,28 +1,29 @@
 const express = require('express');
 const app = express();
-const {pool, newPost} = require('./db');
+const {pool, newPost, retrievePages} = require('./db/db');
 
 const port = 3000||port.env.PORT;
 
-// app.use('/',express.static(__dirname + '/dist'));
+app.use('/',express.static(__dirname + '/dist'));
+app.use(express.json());
 
-app.get('/', (req, res) => {
-  console.log('hello')
+app.get('/allEntries', (req, res) => {
+
+  retrievePages()
+  .then((response) => {
+    console.log('response', response);
+  })
+  .catch((err) => {
+    console.log(err);
+  })
   res.send('Hello World');
 });
 
-// app.get("/", function (req, res) {
-
-//   console.log("Hello");
-
-//   const car = "read";
-
-//   res.send("Hello, world");
-
-// });
 
 app.post('/newPost', (req, res) => {
-  console.log('post made');
+
+  const {title, issues, body} = req.body;
+  newPost(title, issues, body);
   res.send('post')
 });
 

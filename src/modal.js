@@ -50,7 +50,6 @@ const Modal = ({popModal, status, children, onClose, storage}) => {
     localStorage.setItem("entries", json);
   }, [entries]);
 
-  console.log('entry check', entries);
 
   // const clickHandler = (entries) => {
   //   axios.post('/newEntry', {
@@ -87,13 +86,13 @@ const Modal = ({popModal, status, children, onClose, storage}) => {
   }
 
   const clickHandler = (entries) => {
-    axios.post('/newEntry', {
+    axios.post('/newPost', {
       title: entries.projectText,
       issues: entries.issuesText,
       body: entries.reflectText,
     })
     .then((response) => {
-      console.log(response);
+      console.log('response', response);
     })
     .catch((error) => {
       console.log(error)
@@ -102,8 +101,8 @@ const Modal = ({popModal, status, children, onClose, storage}) => {
     onClose();
   }
 
-  console.log('entries: ', entries)
-  console.log('display:', display)
+  // console.log('entries: ', entries)
+  // console.log('display:', display)
 
   const date = new Date().toLocaleString();
 
