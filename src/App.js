@@ -6,6 +6,7 @@ import ModalShell from './modalShell';
 import DisplayAllEntries from './postList';
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import 'regenerator-runtime/runtime';
 
 
 class App extends React.Component {
