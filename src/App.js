@@ -3,8 +3,10 @@ import React, {useContext} from "react";
 import Button from '@material-ui/core/Button';
 import TimeBox from './newTimer';
 import ModalShell from './modalShell';
+import DisplayAllEntries from './postList';
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import 'regenerator-runtime/runtime';
 
 
 class App extends React.Component {
@@ -63,6 +65,7 @@ class App extends React.Component {
           This is a bootstrap button
         </button> */}
         <div>
+        <DisplayAllEntries/>
         </div>
         </div>
       </>
