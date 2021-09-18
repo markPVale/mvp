@@ -11,12 +11,13 @@ app.get('/allEntries', (req, res) => {
 
   retrievePages()
   .then((response) => {
-    console.log('response', response);
+    // console.log('response', response);
+    res.status(200).json(response)
   })
   .catch((err) => {
     console.log(err);
+    res.status(500)
   })
-  res.send('Hello World');
 });
 
 
