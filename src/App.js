@@ -31,7 +31,6 @@ class App extends React.Component {
 
   modalHandler() {
     // console.log('click modal');
-
     this.setState({
       isOpen: true
     })
