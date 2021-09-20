@@ -2,8 +2,6 @@ import React, {useState, useEffect, useContext} from 'react'
 import ReactDom from 'react-dom'
 import FormPropsTextFields from './text'
 import axios from 'axios';
-// import entriesCreate from './entryController'
-
 
 const MODAL_STYLES = {
   position: 'fixed',
@@ -50,23 +48,6 @@ const Modal = ({popModal, status, children, onClose, storage}) => {
     localStorage.setItem("entries", json);
   }, [entries]);
 
-
-  // const clickHandler = (entries) => {
-  //   axios.post('/newEntry', {
-  //     title: `${projectText}`,
-  //     issues: `${issuesText}`,
-  //     body: `${reflectText}`
-  //   })
-  //   .then((response) => {
-  //     console.log(response);
-  //   })
-  //   .catch((error) => {
-  //     console.log(error)
-  //   })
-  //   // storage(entries);
-  //   onClose();
-  // }
-
   const handleProject = (e) => {
     setEntries(prevState => ({
       ...prevState,
@@ -97,12 +78,8 @@ const Modal = ({popModal, status, children, onClose, storage}) => {
     .catch((error) => {
       console.log(error)
     })
-    // storage(entries);
     onClose();
   }
-
-  // console.log('entries: ', entries)
-  // console.log('display:', display)
 
   const date = new Date().toLocaleString();
 
@@ -162,9 +139,6 @@ const Modal = ({popModal, status, children, onClose, storage}) => {
     </>,
     document.getElementById('portal'),
     <div>
-    {/* {
-      entries.map((entry) => <div key={entry.id}>{entry.text}</div> )
-    } */}
     </div>
   )
 }
@@ -172,21 +146,3 @@ const Modal = ({popModal, status, children, onClose, storage}) => {
 export default Modal;
 
 
-
-{/* <label>
-Project/Issues/Tech/Things Learned
-<input
-type='text'
-name='project'
-placeholder='project'
-/>
-</label>
-<br />
-<label>
-Text
-<textarea
-autoFocus
-placeholder="Text"
-rows='20'
-cols='50'></textarea>
-</label> */}

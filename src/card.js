@@ -13,7 +13,6 @@ const Card = ({title, issues, body, date, key}) => {
   }
 
   const handleClick = () => {
-    console.log('clicked card', {body})
     expandCard()
   }
 

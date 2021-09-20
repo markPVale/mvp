@@ -64,7 +64,7 @@ button:hover {
   background-color: rg(224, 255, 255);
 }
 button:active {
-  background-color: (224, 255, 255));
+  background-color: (224, 255, 255);
 }
 button:focus {
   outline: 0;
