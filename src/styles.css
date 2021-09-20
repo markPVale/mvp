@@ -17,6 +17,30 @@
   text-align: center;
 }
 
+.card {
+  margin-top: 10px;
+  background-color: (248, 240, 227);
+}
+
+
+.cardHeading {
+  font-size: 20px;
+  font-weight: 300;
+  margin-left: 3px;
+}
+
+.cardIssues {
+  font-size: 18px;
+  font-weight: 300;
+  margin: 6px 3px 3px 3px;
+}
+
+.cardBody {
+  font-size: 17px;
+  font-weight: 300;
+  margin-left: 3px;
+}
+
 #display {
   margin-bottom: 20px;
 }
@@ -29,18 +53,18 @@
 
 button {
   font-size: 16px;
-  background-color: rgb(217, 60, 35);
-  color: #fff;
+  background-color: rgb(224, 255, 255);
+  color: #000;
   border-radius: 8px;
   border: none;
   padding: 6px 12px;
   cursor: pointer;
 }
 button:hover {
-  background-color: rgb(173, 47, 28);
+  background-color: rg(224, 255, 255);
 }
 button:active {
-  background-color: rgb(130, 35, 21);
+  background-color: (224, 255, 255));
 }
 button:focus {
   outline: 0;

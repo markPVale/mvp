@@ -1,11 +1,28 @@
-import React from 'react';
+import React, {useState} from 'react';
 
 const Card = ({title, issues, body, key}) => {
+  let shortBody = body.slice(0, 50)
+  const [postBody, setPostBody] = useState(shortBody)
+
+  const expandCard = () => {
+    if (postBody.length === 50) {
+      setPostBody(body)
+    } else {
+      setPostBody(shortBody);
+    }
+  }
+
+  const handleClick = () => {
+    console.log('clicked card', {body})
+    expandCard()
+  }
+
   return (
     <div className='card'>
-      <div>{title}</div>
-      <div>{issues}</div>
-      <div>{body}</div>
+      <div className='cardHeading'>{title}</div>
+      <div className='cardIssues'>{issues}</div>
+      <div className='cardBody'>{postBody}</div>
+      <button onClick={() => {handleClick()}}> click </button>
     </div>
   )
 }

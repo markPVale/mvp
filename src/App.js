@@ -4,9 +4,11 @@ import Button from '@material-ui/core/Button';
 import TimeBox from './newTimer';
 import ModalShell from './modalShell';
 import DisplayAllEntries from './postList';
+// import List from './list';
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'regenerator-runtime/runtime';
+
 
 
 class App extends React.Component {
@@ -33,6 +35,7 @@ class App extends React.Component {
 
   modalHandler() {
     // console.log('click modal');
+
     this.setState({
       isOpen: true
     })

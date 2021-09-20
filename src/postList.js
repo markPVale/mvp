@@ -1,14 +1,15 @@
 import React, {useState, useEffect} from 'react';
 import axios from 'axios';
 import Card from './card';
+// import List from './list';
 
 const DisplayAllEntries = () => {
-
+  const [limit, setLimit] = useState(3)
   const [posts, setPosts] = useState([]);
-
+  const [postLength, setPostLength] = useState(posts.length)
   useEffect(() => {
     getPosts()
-  }, [])
+  }, [limit])
 
   let blogEntry;
 
@@ -17,23 +18,40 @@ const DisplayAllEntries = () => {
     .then((response) => {
       let {rows} = response.data;
       console.log('rows', rows);
-      setPosts(rows)
+      setPosts(rows.slice(0, limit))
+      setPostLength(rows.length)
     })
     .catch((err) => {
       console.log(err.name + ':' + err.message);
     })
   }
 
+  console.log('postLength', postLength)
+  const handleClick = () => {
+    console.log('clicked me')
+    if (limit >= postLength) {
+      setLimit(3)
+      console.log('overLimit')
+    } else {
+      setLimit(limit + 3)
+      console.log('limit', limit);
+    }
+
+
+  }
+  console.log('posts', posts);
   return (
     <div>
-      <div> entries </div>
+      <div> </div>
+      {/* <List blogs={posts}/> */}
       <div>{blogEntry = posts.map((post) => {
        return (
        <div key={post.pid}>
-       <Card title={post.title} issues={post.issues} body={post.body.slice(0,15) + '...'}/>
+       <Card title={post.title} issues={post.issues} body={post.body}/>
        </div>
        )
       })}</div>
+      <button onClick={() => {handleClick()}}> click </button>
     </div>
   )
 }
