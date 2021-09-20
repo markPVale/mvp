@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 
-const Card = ({title, issues, body, key}) => {
+const Card = ({title, issues, body, date, key}) => {
   let shortBody = body.slice(0, 50)
   const [postBody, setPostBody] = useState(shortBody)
 
@@ -20,6 +20,7 @@ const Card = ({title, issues, body, key}) => {
   return (
     <div className='card'>
       <div className='cardHeading'>{title}</div>
+      <div className='cardDate'>{date}</div>
       <div className='cardIssues'>{issues}</div>
       <div className='cardBody'>{postBody}</div>
       <button onClick={() => {handleClick()}}> click </button>

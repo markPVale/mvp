@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import axios from 'axios';
 import Card from './card';
+import moment from 'moment';
 // import List from './list';
 
 const DisplayAllEntries = () => {
@@ -18,6 +19,8 @@ const DisplayAllEntries = () => {
     .then((response) => {
       let {rows} = response.data;
       console.log('rows', rows);
+      console.log('date', rows[0].date_created);
+
       setPosts(rows.slice(0, limit))
       setPostLength(rows.length)
     })
@@ -47,7 +50,7 @@ const DisplayAllEntries = () => {
       <div>{blogEntry = posts.map((post) => {
        return (
        <div key={post.pid}>
-       <Card title={post.title} issues={post.issues} body={post.body}/>
+       <Card title={post.title} issues={post.issues} body={post.body} date={moment(post.date_created).format('L')}/>
        </div>
        )
       })}</div>
