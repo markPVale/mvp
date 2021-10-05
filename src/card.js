@@ -22,7 +22,7 @@ const Card = ({title, issues, body, date, key}) => {
       <div className='cardDate'>{date}</div>
       <div className='cardIssues'>{issues}</div>
       <div className='cardBody'>{postBody}</div>
-      <button onClick={() => {handleClick()}}> click </button>
+      <button onClick={() => {handleClick()}}> Expand </button>
     </div>
   )
 }
