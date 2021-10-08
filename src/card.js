@@ -1,4 +1,6 @@
 import React, {useState} from 'react';
+import { AiOutlineDown } from 'react-icons/ai';
+
 
 const Card = ({title, issues, body, date, key}) => {
   let shortBody = body.slice(0, 50)
@@ -22,7 +24,7 @@ const Card = ({title, issues, body, date, key}) => {
       <div className='cardDate'>{date}</div>
       <div className='cardIssues'>{issues}</div>
       <div className='cardBody'>{postBody}</div>
-      <button onClick={() => {handleClick()}}> Expand </button>
+      <button onClick={() => {handleClick()}}> <AiOutlineDown className='downBracket' /> </button>
     </div>
   )
 }

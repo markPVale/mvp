@@ -45,7 +45,7 @@ const DisplayAllEntries = () => {
        </div>
        )
       })}</div>
-      <button onClick={() => {handleClick()}}> click </button>
+      <button onClick={() => {handleClick()}} className='additional'> additional posts </button>
     </div>
   )
 }
