@@ -25,7 +25,6 @@ const DisplayAllEntries = () => {
     })
   }
 
-  console.log('postLength', postLength)
   const handleClick = () => {
     if (limit >= postLength) {
       setLimit(3)
@@ -34,7 +33,6 @@ const DisplayAllEntries = () => {
     }
 
   }
-  console.log('posts', posts);
   return (
     <div>
       <div> </div>

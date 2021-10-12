@@ -2,7 +2,7 @@
 import React, {useContext} from "react";
 import Button from '@material-ui/core/Button';
 import TimeBox from './newTimer';
-import ModalShell from './modalShell';
+import ModalShell from './modal/modalShell';
 import DisplayAllEntries from './postList';
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -35,8 +35,8 @@ class App extends React.Component {
       isOpen: true
     })
 
-    // window.open("http://localhost:3000/?", "worktime", "menubar=yes,location=yes,resizable=yes,scrollbars=yes,status=yes")
-    window.open("https://www.notion.so/c231bd20baef47149ca90c213b4a6759?v=ff4fe6ffd99a4376b990884fee4aae2a", "notion", "menubar=yes,location=yes,resizable=yes,scrollbars=yes,status=yes")
+    window.open("http://localhost:3000/?", "worktime", "menubar=yes,location=yes,resizable=yes,scrollbars=yes,status=yes")
+    // window.open("https://www.notion.so/c231bd20baef47149ca90c213b4a6759?v=ff4fe6ffd99a4376b990884fee4aae2a", "notion", "menubar=yes,location=yes,resizable=yes,scrollbars=yes,status=yes")
 
   }
 
