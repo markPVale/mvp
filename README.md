@@ -1,6 +1,6 @@
-# empty-project
+# Focus
 
-Empty project.
+Focus is a time-management aid that prompts you to journal note the progress, issues and blockers that were encountered during a specified time block.
 
 ## Building and running on localhost
 
