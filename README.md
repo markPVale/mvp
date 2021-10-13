@@ -1,6 +1,6 @@
 # Focus
 
-Focus is a time-management aid that prompts you to journal note the progress, issues and blockers that were encountered during a specified time block.
+Focus is a time-management assistant that prompts you to reflect on and document the progress, issues and blockers that were encountered during the specified time alotted for your task.
 
 ## Building and running on localhost
 
