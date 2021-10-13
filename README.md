@@ -9,7 +9,7 @@ First install dependencies:
 ```sh
 npm install
 ```
-
+![Timer](demo/setTimer.gif)
 To create a production build:
 
 ```sh
