@@ -10,6 +10,8 @@ First install dependencies:
 npm install
 ```
 ![Timer](demo/SetTimer.gif)
+![Timer](demo/Modal.gif)
+![Timer](demo/posts.gif)
 To create a production build:
 
 ```sh
