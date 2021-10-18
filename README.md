@@ -10,23 +10,13 @@ Focus is a time-management assistant that prompts you to reflect on and document
 
 
 
-## Building and running on localhost
+## Features
 
-First install dependencies:
-
-```sh
-npm install
-```
 <img src="demo/SetTimer.gif?raw=true" width="936px">
 <img src="demo/Modal.gif?raw=true" width="1135px">
 <img src="demo/posts.gif?raw=true" width="1135px">
-To create a production build:
 
-```sh
-npm run build-prod
-```
-
-To create a development build:
+## Build Project
 
 ```sh
 npm run build-dev
