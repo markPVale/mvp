@@ -18,8 +18,8 @@ First install dependencies:
 npm install
 ```
 <img src="demo/SetTimer.gif?raw=true" width="936px">
-![Timer](demo/Modal.gif)
-![Timer](demo/posts.gif)
+<img src="demo/Modal.gif?raw=true" width="1135px">
+<img src="demo/posts.gif?raw=true" width="1135px">
 To create a production build:
 
 ```sh
