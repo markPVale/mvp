@@ -17,7 +17,7 @@ First install dependencies:
 ```sh
 npm install
 ```
-
+![Timer](demo/SetTimer.gif)
 ![Timer](demo/Modal.gif)
 ![Timer](demo/posts.gif)
 To create a production build:
