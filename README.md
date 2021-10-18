@@ -12,27 +12,29 @@ Focus is a time-management assistant that prompts you to reflect on and document
 
 ## Features
 
+
 ### Set a timer at any interval to the second
 ![timer](images/timer_3min.gif)
+
 
 ### When your timer is up, journal your progress
 ![modal open](images/modal_pop.gif)
 
+
 ### Submit your entry to the database
 ![submit modal](images/submit.gif)
+
 
 ### Entries will be displayed as expandable cards
 ![expand entries](images/expand.gif)
 
+
 ## Build Project
+Follow these steps to start and run the project
+- Clone down the repo in the terminal
+- Install dependencies - `npm install`
+- Run server - `npm start`
+- It will be available on port 3000 - `http://localhost:3000/`
 
-```sh
-npm run build-dev
-```
 
-## Running
-
-Open the file `dist/index.html` in your browser
-
-## Credits
 
