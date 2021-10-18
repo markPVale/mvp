@@ -35,7 +35,7 @@ class App extends React.Component {
       isOpen: true
     })
 
-    window.open("http://localhost:3000/?", "worktime", "menubar=yes,location=yes,resizable=yes,scrollbars=yes,status=yes")
+    // window.open("http://localhost:3000/?", "worktime", "menubar=yes,location=yes,resizable=yes,scrollbars=yes,status=yes")
     // window.open("https://www.notion.so/c231bd20baef47149ca90c213b4a6759?v=ff4fe6ffd99a4376b990884fee4aae2a", "notion", "menubar=yes,location=yes,resizable=yes,scrollbars=yes,status=yes")
 
   }
