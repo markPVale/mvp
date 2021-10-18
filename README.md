@@ -18,7 +18,7 @@ First install dependencies:
 npm install
 ```
 ![Timer](demo/SetTimer.gif)
-<img src="demo/SetTimer.gif?raw=true" width="1000px">
+<img src="demo/SetTimer.gif?raw=true" width="720px">
 ![Timer](demo/Modal.gif)
 <img src="demo/Modal.gif?raw=true" width="1135px">
 ![Timer](demo/posts.gif)
