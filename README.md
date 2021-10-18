@@ -12,7 +12,10 @@ Focus is a time-management assistant that prompts you to reflect on and document
 
 ## Features
 
-
+![timer](images/timer_3min.gif)
+![modal open](images/modal_pop.gif)
+![submit modal](images/submit.gif)
+![expand entries](images/expand.gif)
 
 ## Build Project
 
