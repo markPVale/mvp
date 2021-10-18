@@ -20,9 +20,9 @@ npm install
 ![Timer](demo/SetTimer.gif)
 <img src="demo/SetTimer.gif?raw=true" width="1105px">
 ![Timer](demo/Modal.gif)
-<img src="demo/Modal.gif?raw=true" width="1105px">
+<img src="demo/Modal.gif?raw=true" width="1135px">
 ![Timer](demo/posts.gif)
-<img src="demo/posts.gif?raw=true" width="1105px">
+<img src="demo/posts.gif?raw=true" width="1135px">
 To create a production build:
 
 ```sh
