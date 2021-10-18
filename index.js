@@ -19,6 +19,10 @@ app.get('/allEntries', (req, res) => {
   })
 });
 
+// app.get('/', (req, res) => {
+//   res.send('Hello World!')
+// })
+
 
 app.post('/newPost', (req, res) => {
 
